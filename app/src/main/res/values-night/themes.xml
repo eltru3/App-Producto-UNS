@@ -1,0 +1,8 @@
+<resources>
+    <style name="Base.Theme.Saborea" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@color/colorSurfaceBackground</item>
+        <item name="android:colorBackground">@color/colorSurfaceBackground</item>
+    </style>
+
+    <style name="Theme.Saborea" parent="Base.Theme.Saborea" />
+</resources>

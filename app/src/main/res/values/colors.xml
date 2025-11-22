@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black_w">#202020</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="turquoise">#5DE2E7</color>
+    <color name="turquoise_mblack">#01AEB4</color>
+    <color name="turquoise_mmblack">#00666A</color>
+    <color name="blue">#0078D7</color>
+    <color name="blue_light">#6C9EEB</color>
+
+    <color name="colorSurfaceBackground">@color/white</color>
+
+    <color name="colorTextUniversal">#FF000000</color>
+    <color name="colorTextUniversalInverse">#FFFFFFFF</color>
+</resources>

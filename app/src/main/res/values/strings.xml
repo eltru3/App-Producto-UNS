@@ -9,7 +9,13 @@
         <string name="hint_number_phone">Número de teléfono</string>
         <string name="login">Iniciar sesión</string>
         <string name="register">Registrarse</string>
+
+        <!-- Pantalla de elección -->
         <string name="title_select">Tipo de cuenta</string>
+        <string name="client_select">CLIENTE</string>
+        <string name="bussines_select">NEGOCIO</string>
+        <string name="bussines_select_desc">Elegir cuenta empresa</string>
+        <string name="client_select_desc">Elegir cuenta cliente</string>
 
         <!-- Pantalla de Registro Client-->
         <string name="hint_tittle_client">¡Crea tu cuenta!</string>
@@ -23,10 +29,6 @@
         <string name="hint_create_email_desc">Introduzca un correo electrónico</string>
         <string name="hint_create_password_desc">Escriba una contraseña</string>
         <string name="hint_create_password_repeat_desc">Repita la contraseña</string>
-
-        <!-- Mensajes -->
-        <string name="mensaje_bienvenida">Bienvenido a Saborea</string>
-        <string name="error_campos_vacios">Por favor completa todos los campos</string>
 
         <!-- Tipos de usuario -->
         <string name="cliente">Cliente</string>

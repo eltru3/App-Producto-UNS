@@ -9,13 +9,7 @@
         <string name="hint_number_phone">Número de teléfono</string>
         <string name="login">Iniciar sesión</string>
         <string name="register">Registrarse</string>
-
-        <!-- Pantalla de elección -->
         <string name="title_select">Tipo de cuenta</string>
-        <string name="client_select">CLIENTE</string>
-        <string name="bussines_select">NEGOCIO</string>
-        <string name="bussines_select_desc">Elegir cuenta empresa</string>
-        <string name="client_select_desc">Elegir cuenta cliente</string>
 
         <!-- Pantalla de Registro Client-->
         <string name="hint_tittle_client">¡Crea tu cuenta!</string>

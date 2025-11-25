@@ -16,13 +16,6 @@
         tools:layout_editor_absoluteX="55dp"
         tools:layout_editor_absoluteY="16dp">
 
-        <ImageView
-            android:id="@+id/decorative_logo"
-            android:contentDescription="@null"
-            android:layout_width="303dp"
-            android:layout_height="210dp"
-            app:srcCompat="@drawable/icon_logo" />
-
         <View
             android:id="@+id/divider1"
             android:layout_width="match_parent"

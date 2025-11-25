@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".registeracc.RegisterActivityClient">
+    tools:context=".registeracc.RegisterActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -114,14 +114,47 @@
             android:layout_height="25dp"
             android:background="@color/colorSurfaceBackground" />
 
+        <TextView
+            android:id="@+id/text_password_repeat_register2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_font"
+            android:labelFor="@id/client_register_password_repeat"
+            android:text="@string/title_select"
+            android:textColor="@color/colorTextUniversal"
+            android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_cliente"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/bussines_select" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_negocio"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="130dp"
+                android:layout_height="wrap_content"
+                android:text="@string/client_select" />
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
         <Button
             android:id="@+id/buttonRegister"
-            android:layout_width="267dp"
+            android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/register"
             android:textColor="@color/colorTextUniversalInverse"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
 
             app:backgroundTint="@color/colorTextUniversal" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

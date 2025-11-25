@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-import uns.saborea.registeracc.ChooseTypeACC;
+import uns.saborea.registeracc.RegisterActivity;
 
 public class LoginActivityMain extends AppCompatActivity {
 
@@ -34,7 +34,7 @@ public class LoginActivityMain extends AppCompatActivity {
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivityMain.this, ChooseTypeACC.class);
+                Intent intent = new Intent(LoginActivityMain.this, RegisterActivity.class);
                 startActivity(intent);
             }
         });

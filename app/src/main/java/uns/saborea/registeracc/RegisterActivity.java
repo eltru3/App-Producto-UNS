@@ -1,8 +1,6 @@
 package uns.saborea.registeracc;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,7 +10,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 import uns.saborea.R;
 
-public class RegisterActivityClient extends AppCompatActivity {
+public class RegisterActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

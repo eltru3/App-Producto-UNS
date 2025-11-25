@@ -8,17 +8,17 @@
         <string name="hint_password">Contraseña</string>
         <string name="hint_number_phone">Número de teléfono</string>
         <string name="login">Iniciar sesión</string>
-        <string name="register">Registrarse</string>}
+        <string name="register">Registrarse</string>
 
         <!-- Pantalla de elección -->
-        <string name="title_select">SELECCIONE EL TIPO DE CUENTA</string>
-        <string name="client_select">CUENTA CLIENTE</string>
-        <string name="bussines_select">CUENTA EMPRESA</string>
+        <string name="title_select">Tipo de cuenta</string>
+        <string name="client_select">CLIENTE</string>
+        <string name="bussines_select">NEGOCIO</string>
         <string name="bussines_select_desc">Elegir cuenta empresa</string>
         <string name="client_select_desc">Elegir cuenta cliente</string>
 
         <!-- Pantalla de Registro Client-->
-        <string name="hint_tittle_client">¡Crea tu cuenta como cliente!</string>
+        <string name="hint_tittle_client">¡Crea tu cuenta!</string>
         <string name="hint_create_email">Correo electrónico</string>
         <string name="hint_create_username">Nombre de usuario</string>
         <string name="hint_create_password">Contraseña</string>
@@ -29,18 +29,6 @@
         <string name="hint_create_email_desc">Introduzca un correo electrónico</string>
         <string name="hint_create_password_desc">Escriba una contraseña</string>
         <string name="hint_create_password_repeat_desc">Repita la contraseña</string>
-
-        <!-- Pantalla de Registro Negocio-->
-        <string name="hint_tittle_bisness">¡Crea tu cuenta como negocio!</string>
-        <string name="hint_create_site_bisness">Nombre del establecimiento</string>
-        <string name="hint_create_email_bisness">Correo electrónico</string>
-        <string name="hint_create_username_bisness">Nombre de usuario</string>
-        <string name="hint_create_password_bisness">Contraseña</string>
-        <string name="hint_create_password_repeat_bisness">Repetir contraseña</string>
-        <string name="hint_create_number_phone_bisness">Número de teléfono</string>
-        <string name="create_account_bisness">Crear cuenta</string>
-
-        <string name="hint_create_site_bisness_desc">Escriba el nombre de su establecimiento</string>
 
         <!-- Mensajes -->
         <string name="mensaje_bienvenida">Bienvenido a Saborea</string>

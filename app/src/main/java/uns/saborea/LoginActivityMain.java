@@ -37,15 +37,6 @@ public class LoginActivityMain extends AppCompatActivity {
             return insets;
         });
 
-        // --- BOTÓN NORMAL DE REGISTRO ---
-        Button buttonRegister = findViewById(R.id.buttonRegister);
-        if (buttonRegister != null) {
-            buttonRegister.setOnClickListener(v -> {
-                Intent intent = new Intent(LoginActivityMain.this, RegisterActivity.class);
-                startActivity(intent);
-            });
-        }
-
         // TEXTO: "¿No tienes una cuenta? Regístrate"
         TextView textRegistro = findViewById(R.id.textRegistro);
         if (textRegistro != null) {

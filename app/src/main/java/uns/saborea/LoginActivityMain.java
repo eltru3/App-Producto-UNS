@@ -11,10 +11,10 @@ import android.text.method.LinkMovementMethod;
 import android.text.style.ClickableSpan;
 import android.text.style.ForegroundColorSpan;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -55,13 +55,13 @@ public class LoginActivityMain extends AppCompatActivity {
             // CLICK + apariencia de "Regístrate" (NEGRO)
             ClickableSpan clickableSpan = new ClickableSpan() {
                 @Override
-                public void onClick(View widget) {
+                public void onClick(@NonNull View widget) {
                     Intent intent = new Intent(LoginActivityMain.this, RegisterActivity.class);
                     startActivity(intent);
                 }
 
                 @Override
-                public void updateDrawState(TextPaint ds) {
+                public void updateDrawState(@NonNull TextPaint ds) {
                     super.updateDrawState(ds);
                     ds.setColor(Color.BLACK);    // COLOR NEGRO
                     ds.setUnderlineText(false);   // sin subrayado

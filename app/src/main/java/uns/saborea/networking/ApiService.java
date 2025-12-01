@@ -11,6 +11,6 @@ public interface ApiService {
     @POST("api/register.php")
     Call<ModelResponse> registerUser(@Body Map<String, String> userData);
 
-    @POST("api/register.php")
+    @POST("api/login.php")
     Call<ModelResponse> loginUser(@Body Map<String, String> userData);
 }

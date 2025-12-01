@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Style de titulo -->
+    <style name="nombre">
+        <item name="android:textSize">24sp</item>
+        <item name="android:letterSpacing">-0.01</item>
+        <item name="android:textColor">#000000</item>
+    </style>
+
+    <!-- Style hola que gusto -->
+    <style name="hola_que_gu">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">@font/inter_bold</item>
+    </style>
+
+    <!-- Style de ingresa tus datos -->
+    <style name="ingresa_tus">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#000000</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <!-- Style de texto y registrate -->
+    <style name="no_tienes_u">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#828282</item>
+    </style>
+</resources>

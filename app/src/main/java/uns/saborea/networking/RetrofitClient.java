@@ -7,7 +7,7 @@ public class RetrofitClient {
 
     // Usar la IP de la VPS con un dominio con HTTPS
     // (IMPORTANTE) Cuando uses la IP, necesitas un certificado SSL válido
-    private static final String BASE_URL = "163.5.120.23";
+    private static final String BASE_URL = "https://root.saboreapp.online/";
     private static Retrofit retrofit;
 
     public static ApiService getApiservice() {

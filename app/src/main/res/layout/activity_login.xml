@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,96 +8,186 @@
     android:layout_height="match_parent"
     tools:context=".LoginActivityMain">
 
+    <!-- Espacio para ordenar la interfaz -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
-        android:padding="20dp"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="16dp">
+        android:padding="20dp">
 
+        <!-- Título -->
+        <TextView
+            android:id="@+id/nombre"
+            android:layout_width="162dp"
+            android:layout_height="36dp"
+            android:fontFamily="@font/inter_bold"
+            android:gravity="center"
+            android:lineSpacingExtra="7sp"
+            android:text="@string/nombre"
+            android:textAppearance="@style/nombre" />
+
+        <!-- divider1 -->
         <View
             android:id="@+id/divider1"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="70dp"
             android:background="@color/colorSurfaceBackground" />
 
+        <!-- Hola que gusto verte por aquí -->
         <TextView
-            android:id="@+id/text_login"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_font"
-            android:text="@string/login"
-            android:gravity="center_horizontal"
-            android:textColor="@color/colorTextUniversal"
-            android:textStyle="bold"
-            android:textSize="25sp" />
+            android:id="@+id/hola_que_gu"
+            android:layout_width="245dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/hola_que_gu"
+            android:textAppearance="@style/hola_que_gu"
+            android:translationY="-2dp" />
 
+        <!-- Ingresa tus datos -->
+        <TextView
+            android:id="@+id/ingresa_tus"
+            android:layout_width="350dp"
+            android:layout_height="25dp"
+            android:gravity="center"
+            android:lineSpacingExtra="4sp"
+            android:text="@string/ingresa_tus"
+            android:textAppearance="@style/ingresa_tus"
+            android:translationY="-2dp" />
+
+        <!-- divider2 -->
         <View
             android:id="@+id/divider"
             android:layout_width="match_parent"
             android:layout_height="25dp"
             android:background="@color/colorSurfaceBackground" />
 
-        <TextView
-            android:id="@+id/textViewEmail"
-            android:labelFor="@id/login_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_font"
-            android:text="@string/hint_email"
-            android:textColor="@color/colorTextUniversal"
-            android:textStyle="bold" />
+        <!-- Campo Email -->
+        <RelativeLayout
+            android:id="@+id/field"
+            android:layout_width="327dp"
+            android:layout_height="48dp"
+            android:background="@drawable/field_bg">
 
-        <EditText
-            android:id="@+id/login_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:autofillHints="emailAddress"
-            android:inputType="textEmailAddress"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/emailInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="emailAddress"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#444444"
+                android:textSize="14sp" />
+        </RelativeLayout>
 
-        <TextView
-            android:id="@+id/textView2"
-            android:labelFor="@id/login_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_font"
-            android:text="@string/hint_password"
-            android:textStyle="bold"
-            android:textColor="@color/colorTextUniversal" />
+        <!-- Campo Password -->
+        <RelativeLayout
+            android:id="@+id/fieldPassword"
+            android:layout_width="327dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/field_bg">
 
-        <EditText
-            android:id="@+id/login_password"
-            android:labelFor="@id/main"
-            android:autofillHints="password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/passwordInput"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="password"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center_vertical"
+                android:hint="@string/hint_password"
+                android:inputType="textPassword"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#444444"
+                android:textSize="14sp" />
+        </RelativeLayout>
 
+        <!-- Botón Login -->
         <Button
             android:id="@+id/buttonLogin"
-            android:layout_width="268dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="@string/login"
-            android:textColorHint="@color/white"
-            android:textColor="@color/colorTextUniversalInverse"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
-
+            android:layout_width="327dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/login"
+            android:textColor="@color/colorTextUniversalInverse"
+            android:textAllCaps="false"
+            android:fontFamily="@font/inter_medium"
             app:backgroundTint="@color/colorTextUniversal"/>
 
-        <Button
-            android:id="@+id/buttonRegister"
-            android:layout_width="267dp"
+        <!-- Separador con texto "o" -->
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/register"
-            android:textColor="@color/colorTextUniversalInverse"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-            app:backgroundTint="@color/colorTextUniversal" />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#828282" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/separador_o"
+                android:textColor="#828282"
+                android:textSize="22sp" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"
+                android:background="#828282" />
+        </LinearLayout>
+
+        <!-- Botón de inicio de sesión con Google -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/googleButton"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="327dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="@string/google_login"
+            android:textColor="#000000"
+            android:textAllCaps="false"
+            android:fontFamily="@font/inter_medium"
+
+            app:icon="@drawable/logogoogle"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+            app:iconTint="@null"
+            app:iconSize="18dp"
+
+            app:backgroundTint="#C7C7C7"/>
+
+        <!-- Texto y Registrate -->
+        <TextView
+            android:id="@+id/textRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:textSize="14sp"
+            android:textColor="#777777"
+            android:lineSpacingExtra="2dp"
+            android:text="@string/txt_registro_preview"
+            tools:text="¿No tienes una cuenta? Regístrate" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

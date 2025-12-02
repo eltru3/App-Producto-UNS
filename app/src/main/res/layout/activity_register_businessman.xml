@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registeracc.RegisterActivityBusinessman">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:layout_editor_absoluteX="55dp"
+        tools:layout_editor_absoluteY="16dp">
+
+        <View
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/colorSurfaceBackground" />
+
+        <TextView
+            android:id="@+id/text_login_bus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:gravity="center_horizontal"
+            android:text="@string/reg_bus_tittle_client"
+            android:textColor="@color/colorTextUniversal"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <View
+            android:id="@+id/divider2"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorSurfaceBackground" />
+
+        <TextView
+            android:id="@+id/text_bus_name"
+            android:labelFor="@id/bus_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/reg_bus_name"
+            android:textColor="@color/colorTextUniversal"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/bus_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="username"
+            android:inputType="textPersonName"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/divider4"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/colorSurfaceBackground" />
+
+        <TextView
+            android:id="@+id/text_bus_type"
+            android:labelFor="@id/bus_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/reg_bus_type"
+            android:textColor="@color/colorTextUniversal"
+            android:textStyle="bold" />
+
+
+        <EditText
+            android:id="@+id/bus_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autofillHints="name"
+            android:inputType="text"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/divider6"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/colorSurfaceBackground" />
+
+        <TextView
+            android:id="@+id/text_bus_address"
+            android:labelFor="@id/bus_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/reg_bus_address"
+            android:textColor="@color/colorTextUniversal"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/bus_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPostalAddress|textMultiLine"
+            android:autofillHints="postalAddress"
+            android:textSize="20sp" />
+
+        <View
+            android:id="@+id/divider3"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="@color/colorSurfaceBackground" />
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggle_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:singleSelection="true"/>
+
+        <Button
+            android:id="@+id/buttonRegisterBusinessman"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:text="@string/reg_bus_create"
+            android:textColor="@color/colorTextUniversalInverse"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+
+            app:backgroundTint="@color/colorTextUniversal" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

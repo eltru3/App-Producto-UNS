@@ -47,8 +47,15 @@
     <!-- Texto de ingresa tus datos -->
     <string name="ingresa_tus">Ingresa tus datos para ingresar a la app</string>
 
-    <!-- Icono de google -->
-    <string name="google_icon">Google icon</string>
+    <!-- Pantalla de Registro Principal -->
+    <string name="reg_tittle_client">¡Crea tu cuenta!</string>
+    <string name="reg_create_email">Correo Electrónico</string>
+    <string name="reg_create_password">Contraseña</string>
+    <string name="reg_create_password_repeat">Repetir contraseña</string>
+    <string name="reg_title_select">Tipo de cuenta</string>
+    <string name="reg_bussines_select">NEGOCIO</string>
+    <string name="reg_client_select">CLIENTE</string>
+    <string name="register_continue">Continuar</string>
 
     <!-- Pantalla Registro Negocio -->
     <string name="reg_bus_tittle_client">Datos de su Negocio</string>

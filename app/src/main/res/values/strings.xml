@@ -1,5 +1,5 @@
 <resources>
-    <!-- Nombres de la app -->
+    <!-- Nombre de la app -->
     <string name="app_name">Saborea</string>
 
     <!-- Pantalla de Login Main -->

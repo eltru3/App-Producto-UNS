@@ -57,11 +57,9 @@
     <string name="reg_bus_address">Direccion del lugar</string>
     <string name="reg_bus_create">COMPLETAR REGISTRO</string>
 
-    <!-- Texto del botón de Google -->
-    <string name="google_login">Inicia sesión con Google</string>
-
-    <!-- Texto y registrate -->
-    <string name="txt_registro_preview">¿No tienes una cuenta? Regístrate</string>
-
+    <!-- Pantalla Registro Cliente -->
+    <string name="reg_cli_tittle_client">Datos de cliente</string>
+    <string name="reg_cli_name">Nombre de usuario</string>
+    <string name="reg_cli_create">COMPLETAR REGISTRO</string>
 
 </resources>

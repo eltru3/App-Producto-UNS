@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitClient {
 
     // Usar la IP de la VPS con un dominio con HTTPS
-    // (IMPORTANTE) Cuando uses la IP, necesitas un certificado SSL válido
+    // (IMPORTANTE) SSL VÁLIDADO
     private static final String BASE_URL = "https://root.saboreapp.online/";
     private static Retrofit retrofit;
 
@@ -16,7 +16,6 @@ public class RetrofitClient {
                     .baseUrl(BASE_URL)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
-        }
-        return retrofit.create(ApiService.class);
+        } return retrofit.create(ApiService.class);
     }
 }

@@ -50,8 +50,12 @@
     <!-- Icono de google -->
     <string name="google_icon">Google icon</string>
 
-    <!-- Separador "o" -->
-    <string name="separador_o">o</string>
+    <!-- Pantalla Registro Negocio -->
+    <string name="reg_bus_tittle_client">Datos de su Negocio</string>
+    <string name="reg_bus_name">Nombre de su establecimiento</string>
+    <string name="reg_bus_type">Tipo de gastronomia</string>
+    <string name="reg_bus_address">Direccion del lugar</string>
+    <string name="reg_bus_create">COMPLETAR REGISTRO</string>
 
     <!-- Texto del botón de Google -->
     <string name="google_login">Inicia sesión con Google</string>

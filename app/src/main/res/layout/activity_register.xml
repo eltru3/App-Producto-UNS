@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_regular"
-            android:text="@string/hint_tittle_client"
+            android:text="@string/reg_tittle_client"
             android:gravity="center_horizontal"
             android:textColor="@color/colorTextUniversal"
             android:textStyle="bold"
@@ -41,20 +41,20 @@
 
         <TextView
             android:id="@+id/textViewEmail"
-            android:labelFor="@id/client_register_email"
+            android:labelFor="@id/register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_regular"
-            android:text="@string/hint_email"
+            android:text="@string/reg_create_email"
             android:textColor="@color/colorTextUniversal"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/client_register_email"
+            android:id="@+id/register_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textEmailAddress"
-            android:autofillHints="password"
+            android:autofillHints="emailAddress"
             android:textSize="20sp" />
 
         <View
@@ -65,18 +65,17 @@
 
         <TextView
             android:id="@+id/text_password_register_client"
-            android:labelFor="@id/client_register_password"
+            android:labelFor="@id/register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_regular"
-            android:text="@string/hint_create_password"
+            android:text="@string/reg_create_password"
             android:textColor="@color/colorTextUniversal"
             android:textStyle="bold" />
 
 
         <EditText
-            android:id="@+id/client_register_password"
-            android:labelFor="@id/text_password_register_client"
+            android:id="@+id/register_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -91,17 +90,16 @@
 
         <TextView
             android:id="@+id/text_password_repeat_register"
-            android:labelFor="@id/client_register_password_repeat"
+            android:labelFor="@id/register_password_repeat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_regular"
-            android:text="@string/hint_create_password_repeat"
+            android:text="@string/reg_create_password_repeat"
             android:textColor="@color/colorTextUniversal"
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/client_register_password_repeat"
-            android:labelFor="@id/text_password_register_client"
+            android:id="@+id/register_password_repeat"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="textPassword"
@@ -119,38 +117,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_regular"
-            android:labelFor="@id/client_register_password_repeat"
-            android:text="@string/title_select"
+            android:text="@string/reg_title_select"
             android:textColor="@color/colorTextUniversal"
             android:textStyle="bold" />
 
         <com.google.android.material.button.MaterialButtonToggleGroup
-            android:id="@+id/toggle_group"
+            android:id="@+id/toggle_group_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:singleSelection="true">
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_cliente"
+                android:id="@+id/button_negocio"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:text="@string/bussines_select" />
+                android:text="@string/reg_bussines_select" />
 
             <com.google.android.material.button.MaterialButton
-                android:id="@+id/btn_negocio"
+                android:id="@+id/button_cliente"
                 style="@style/Widget.MaterialComponents.Button.OutlinedButton"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:text="@string/client_select" />
+                android:text="@string/reg_client_select" />
 
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
         <Button
-            android:id="@+id/buttonRegister"
+            android:id="@+id/button_register_continue"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:text="@string/register"
+            android:text="@string/register_continue"
             android:textColor="@color/colorTextUniversalInverse"
             style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
 

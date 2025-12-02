@@ -2,11 +2,17 @@
     <!-- Nombres de la app -->
     <string name="app_name">Saborea</string>
 
-    <!-- Pantalla de Logeo -->
-    <string name="hint_email">Correo Electrónico</string>
-    <string name="hint_username">Usuario</string>
-    <string name="hint_password">Contraseña</string>
-    <string name="hint_number_phone">Número de teléfono</string>
+    <!-- Pantalla de Login Main -->
+    <string name="nombre">Saborea</string>
+    <string name="hola_que_gu">¡Hola que gusto verte por aqui!</string>
+    <string name="ingresa_tus">Ingresa tus datos para ingresar a la app</string>
+    <string name="google_icon">Google icon</string>
+    <string name="separador_o">o</string>
+    <string name="txt_registro_preview">¿No tienes una cuenta? Regístrate</string>
+    <string name="google_login">Inicia sesión con Google</string>
+    <string name="log_email">Correo Electrónico</string>
+    <string name="log_username">Usuario</string>
+    <string name="log_password">Contraseña</string>
     <string name="login">Iniciar sesión</string>
 
     <!-- Pantalla de Registro Principal -->

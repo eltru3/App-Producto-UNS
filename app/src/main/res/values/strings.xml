@@ -1,63 +1,40 @@
 <resources>
-    <!-- Nombres de la app -->
+    <!-- Nombre de la app -->
     <string name="app_name">Saborea</string>
 
-    <!-- Pantalla de Logeo -->
-    <string name="hint_email">Correo Electrónico</string>
-    <string name="hint_username">Usuario</string>
-    <string name="hint_password">Contraseña</string>
-    <string name="hint_number_phone">Número de teléfono</string>
-    <string name="login">Iniciar sesión</string>
-    <string name="register">Registrarse</string>
-
-    <!-- Pantalla de elección -->
-    <string name="title_select">Tipo de cuenta</string>
-    <string name="client_select">CLIENTE</string>
-    <string name="bussines_select">NEGOCIO</string>
-    <string name="bussines_select_desc">Elegir cuenta empresa</string>
-    <string name="client_select_desc">Elegir cuenta cliente</string>
-
-    <!-- Pantalla de Registro Client-->
-    <string name="hint_tittle_client">¡Crea tu cuenta!</string>
-    <string name="hint_create_email">Correo electrónico</string>
-    <string name="hint_create_username">Nombre de usuario</string>
-    <string name="hint_create_password">Contraseña</string>
-    <string name="hint_create_password_repeat">Repetir contraseña</string>
-    <string name="hint_create_number_phone">Número de teléfono</string>
-    <string name="create_account">Crear cuenta</string>
-
-    <string name="hint_create_email_desc">Introduzca un correo electrónico</string>
-    <string name="hint_create_password_desc">Escriba una contraseña</string>
-    <string name="hint_create_password_repeat_desc">Repita la contraseña</string>
-
-    <!-- Tipos de usuario -->
-    <string name="cliente">Cliente</string>
-    <string name="propietario">Propietario de Restaurante</string>
-
-
-
-    <!-- STRINGS DE LA NUEVA INTERFAZ -->
-
-    <!-- Texto del titulo -->
+    <!-- Pantalla de Login Main -->
     <string name="nombre">Saborea</string>
-
-    <!-- Texto de hola que gusto -->
     <string name="hola_que_gu">¡Hola que gusto verte por aqui!</string>
-
-    <!-- Texto de ingresa tus datos -->
     <string name="ingresa_tus">Ingresa tus datos para ingresar a la app</string>
-
-    <!-- Icono de google -->
     <string name="google_icon">Google icon</string>
-
-    <!-- Separador "o" -->
     <string name="separador_o">o</string>
-
-    <!-- Texto del botón de Google -->
-    <string name="google_login">Inicia sesión con Google</string>
-
-    <!-- Texto y registrate -->
     <string name="txt_registro_preview">¿No tienes una cuenta? Regístrate</string>
+    <string name="google_login">Inicia sesión con Google</string>
+    <string name="log_email">Correo Electrónico</string>
+    <string name="log_username">Usuario</string>
+    <string name="log_password">Contraseña</string>
+    <string name="login">Iniciar sesión</string>
 
+    <!-- Pantalla de Registro Principal -->
+    <string name="reg_tittle_client">¡Crea tu cuenta!</string>
+    <string name="reg_create_email">Correo Electrónico</string>
+    <string name="reg_create_password">Contraseña</string>
+    <string name="reg_create_password_repeat">Repetir contraseña</string>
+    <string name="reg_title_select">Tipo de cuenta</string>
+    <string name="reg_bussines_select">NEGOCIO</string>
+    <string name="reg_client_select">CLIENTE</string>
+    <string name="register_continue">Continuar</string>
+
+    <!-- Pantalla Registro Negocio -->
+    <string name="reg_bus_tittle_client">Datos de su Negocio</string>
+    <string name="reg_bus_name">Nombre de su establecimiento</string>
+    <string name="reg_bus_type">Tipo de gastronomia</string>
+    <string name="reg_bus_address">Direccion del lugar</string>
+    <string name="reg_bus_create">COMPLETAR REGISTRO</string>
+
+    <!-- Pantalla Registro Cliente -->
+    <string name="reg_cli_tittle_client">Datos de cliente</string>
+    <string name="reg_cli_name">Nombre de usuario</string>
+    <string name="reg_cli_create">COMPLETAR REGISTRO</string>
 
 </resources>

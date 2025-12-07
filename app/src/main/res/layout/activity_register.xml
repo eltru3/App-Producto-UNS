@@ -13,8 +13,8 @@
         android:gravity="center"
         android:orientation="vertical"
         android:padding="20dp"
-        tools:layout_editor_absoluteX="55dp"
-        tools:layout_editor_absoluteY="16dp">
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <View
             android:id="@+id/divider1"
@@ -27,11 +27,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/inter_regular"
-            android:text="@string/reg_tittle_client"
             android:gravity="center_horizontal"
+            android:text="@string/reg_tittle_client"
             android:textColor="@color/colorTextUniversal"
-            android:textStyle="bold"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
         <View
             android:id="@+id/divider2"
@@ -40,116 +40,214 @@
             android:background="@color/colorSurfaceBackground" />
 
         <TextView
-            android:id="@+id/textViewEmail"
+            android:id="@+id/Correo_Register"
+            android:layout_width="327dp"
+            android:layout_height="30dp"
+            android:gravity="left"
             android:labelFor="@id/register_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_regular"
-            android:text="@string/reg_create_email"
-            android:textColor="@color/colorTextUniversal"
-            android:textStyle="bold" />
+            android:lineSpacingExtra="5sp"
+            android:text="@string/introduce_t"
+            android:textAppearance="@style/TextAllReg" />
 
-        <EditText
-            android:id="@+id/register_email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:autofillHints="emailAddress"
-            android:textSize="20sp" />
+        <RelativeLayout
+            android:id="@+id/fieldEmailRegister"
+            android:layout_width="327dp"
+            android:layout_height="48dp"
+            android:background="@drawable/field_bg">
+
+            <EditText
+                android:id="@+id/register_email"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="emailAddress"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center_vertical"
+                android:hint="@string/reg_email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#444444"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
 
         <View
             android:id="@+id/divider4"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="8dp"
             android:background="@color/colorSurfaceBackground" />
 
         <TextView
-            android:id="@+id/text_password_register_client"
+            android:id="@+id/Password_Register"
+            android:layout_width="327dp"
+            android:layout_height="30dp"
+            android:gravity="left"
             android:labelFor="@id/register_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_regular"
-            android:text="@string/reg_create_password"
-            android:textColor="@color/colorTextUniversal"
-            android:textStyle="bold" />
+            android:lineSpacingExtra="5sp"
+            android:text="@string/reg_password"
+            android:textAppearance="@style/TextAllReg" />
 
+        <RelativeLayout
+            android:id="@+id/fieldPassword"
+            android:layout_width="327dp"
+            android:layout_height="48dp"
+            android:background="@drawable/field_bg">
 
-        <EditText
-            android:id="@+id/register_password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:autofillHints="password"
-            android:textSize="20sp" />
+            <EditText
+                android:id="@+id/register_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="password"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center_vertical"
+                android:hint="@string/reg_password"
+                android:inputType="textPassword"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#444444"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
 
         <View
             android:id="@+id/divider6"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="8dp"
             android:background="@color/colorSurfaceBackground" />
 
         <TextView
-            android:id="@+id/text_password_repeat_register"
-            android:labelFor="@id/register_password_repeat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_regular"
-            android:text="@string/reg_create_password_repeat"
-            android:textColor="@color/colorTextUniversal"
-            android:textStyle="bold" />
+            android:id="@+id/Password_RegisterConfirm"
+            android:layout_width="327dp"
+            android:layout_height="30dp"
+            android:gravity="left"
+            android:labelFor="@id/register_passwordconfirm"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/reg_passwordconfirm"
+            android:textAppearance="@style/TextAllReg" />
 
-        <EditText
-            android:id="@+id/register_password_repeat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:autofillHints="password"
-            android:textSize="20sp" />
+        <RelativeLayout
+            android:id="@+id/fieldPasswordConfirm"
+            android:layout_width="327dp"
+            android:layout_height="48dp"
+            android:background="@drawable/field_bg">
+
+            <EditText
+                android:id="@+id/register_passwordconfirm"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:autofillHints="password"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/inter_bold"
+                android:gravity="center_vertical"
+                android:hint="@string/reg_passwordconfirm"
+                android:inputType="textPassword"
+                android:paddingStart="12dp"
+                android:paddingEnd="12dp"
+                android:textColor="#000000"
+                android:textColorHint="#444444"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
 
         <View
             android:id="@+id/divider3"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="20dp"
             android:background="@color/colorSurfaceBackground" />
 
         <TextView
-            android:id="@+id/text_password_repeat_register2"
-            android:layout_width="match_parent"
+            android:id="@+id/Register_genero"
+            android:layout_width="327dp"
+            android:layout_height="30dp"
+            android:gravity="left"
+            android:labelFor="@id/Register_genero"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/reg_genero"
+            android:textAppearance="@style/TextAllReg" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/inter_regular"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:buttonTint="@color/colorTextUniversalInverse"
+                android:text="Masculino" />
+
+            <RadioButton
+                android:id="@+id/Female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:buttonTint="@color/colorTextUniversalInverse"
+                android:text="Femenino" />
+
+            <RadioButton
+                android:id="@+id/nosay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorTextUniversalInverse"
+                android:text="Otro" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorSurfaceBackground" />
+
+        <TextView
+            android:id="@+id/Register_tipocuenta"
+            android:layout_width="327dp"
+            android:layout_height="30dp"
+            android:gravity="left"
+            android:labelFor="@id/button_negocio"
+            android:lineSpacingExtra="5sp"
             android:text="@string/reg_title_select"
-            android:textColor="@color/colorTextUniversal"
-            android:textStyle="bold" />
+            android:textAppearance="@style/TextAllReg"/>
 
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/toggle_group_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:singleSelection="true">
+            app:singleSelection="true"
+            app:selectionRequired="true">   <!-- ⭐ AGREGAR ESTA LÍNEA ⭐ -->
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_negocio"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/ToggleGoldStyle"
+                android:checkable="true"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:text="@string/reg_bussines_select" />
+                android:text="@string/reg_bussines_select"/>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_cliente"
-                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                style="@style/ToggleGoldStyle"
+                android:checkable="true"
                 android:layout_width="130dp"
                 android:layout_height="wrap_content"
-                android:text="@string/reg_client_select" />
-
+                android:text="@string/reg_client_select"/>
         </com.google.android.material.button.MaterialButtonToggleGroup>
 
         <Button
             android:id="@+id/button_register_continue"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/register_continue"
+            android:textAllCaps="false"
             android:textColor="@color/colorTextUniversalInverse"
-            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
 
             app:backgroundTint="@color/colorTextUniversal" />
 

@@ -39,11 +39,12 @@
             android:layout_height="45dp"
             android:background="@color/colorSurfaceBackground" />
 
+        <!-- EMAIL LABEL -->
         <TextView
             android:id="@+id/Correo_Register"
             android:layout_width="327dp"
             android:layout_height="30dp"
-            android:gravity="left"
+            android:gravity="start"
             android:labelFor="@id/register_email"
             android:lineSpacingExtra="5sp"
             android:text="@string/introduce_t"
@@ -69,7 +70,8 @@
                 android:paddingEnd="12dp"
                 android:textColor="#000000"
                 android:textColorHint="#444444"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:importantForAccessibility="yes" />
 
         </RelativeLayout>
 
@@ -79,12 +81,13 @@
             android:layout_height="8dp"
             android:background="@color/colorSurfaceBackground" />
 
+        <!-- PASSWORD LABEL -->
         <TextView
             android:id="@+id/Password_Register"
             android:layout_width="327dp"
             android:layout_height="30dp"
-            android:gravity="left"
-            android:labelFor="@id/register_password"
+            android:gravity="start"
+            android:labelFor="@+id/register_password"
             android:lineSpacingExtra="5sp"
             android:text="@string/reg_password"
             android:textAppearance="@style/TextAllReg" />
@@ -109,7 +112,8 @@
                 android:paddingEnd="12dp"
                 android:textColor="#000000"
                 android:textColorHint="#444444"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:importantForAccessibility="yes" />
 
         </RelativeLayout>
 
@@ -119,11 +123,12 @@
             android:layout_height="8dp"
             android:background="@color/colorSurfaceBackground" />
 
+        <!-- CONFIRM PASSWORD LABEL -->
         <TextView
             android:id="@+id/Password_RegisterConfirm"
             android:layout_width="327dp"
             android:layout_height="30dp"
-            android:gravity="left"
+            android:gravity="start"
             android:labelFor="@id/register_passwordconfirm"
             android:lineSpacingExtra="5sp"
             android:text="@string/reg_passwordconfirm"
@@ -149,7 +154,8 @@
                 android:paddingEnd="12dp"
                 android:textColor="#000000"
                 android:textColorHint="#444444"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:importantForAccessibility="yes" />
 
         </RelativeLayout>
 
@@ -159,12 +165,13 @@
             android:layout_height="20dp"
             android:background="@color/colorSurfaceBackground" />
 
+        <!-- GENERO LABEL -->
         <TextView
             android:id="@+id/Register_genero"
             android:layout_width="327dp"
             android:layout_height="30dp"
-            android:gravity="left"
-            android:labelFor="@id/Register_genero"
+            android:gravity="start"
+            android:labelFor="@id/radioGroupGender"
             android:lineSpacingExtra="5sp"
             android:text="@string/reg_genero"
             android:textAppearance="@style/TextAllReg" />
@@ -181,7 +188,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
                 android:buttonTint="@color/colorTextUniversalInverse"
-                android:text="Masculino" />
+                android:text="@string/gender_male" />
 
             <RadioButton
                 android:id="@+id/Female"
@@ -189,14 +196,14 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="24dp"
                 android:buttonTint="@color/colorTextUniversalInverse"
-                android:text="Femenino" />
+                android:text="@string/gender_female" />
 
             <RadioButton
                 android:id="@+id/nosay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:buttonTint="@color/colorTextUniversalInverse"
-                android:text="Otro" />
+                android:text="@string/gender_other" />
 
         </RadioGroup>
 
@@ -206,11 +213,12 @@
             android:layout_height="10dp"
             android:background="@color/colorSurfaceBackground" />
 
+        <!-- TIPO CUENTA LABEL -->
         <TextView
             android:id="@+id/Register_tipocuenta"
             android:layout_width="327dp"
             android:layout_height="30dp"
-            android:gravity="left"
+            android:gravity="start"
             android:labelFor="@id/button_negocio"
             android:lineSpacingExtra="5sp"
             android:text="@string/reg_title_select"
@@ -221,7 +229,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:singleSelection="true"
-            app:selectionRequired="true">   <!-- ⭐ AGREGAR ESTA LÍNEA ⭐ -->
+            app:selectionRequired="true">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/button_negocio"
@@ -248,7 +256,6 @@
             android:text="@string/register_continue"
             android:textAllCaps="false"
             android:textColor="@color/colorTextUniversalInverse"
-
             app:backgroundTint="@color/colorTextUniversal" />
 
     </LinearLayout>

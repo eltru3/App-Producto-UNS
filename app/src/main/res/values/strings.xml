@@ -15,34 +15,40 @@
     <string name="log_password">Contraseña</string>
     <string name="login">Iniciar sesión</string>
 
-    <!-- Pantalla de Registro Principal -->
-    <string name="reg_tittle_client">Identifícate con nosotros</string>
+        <!-- Pantalla de Registro Principal -->
+        <string name="reg_tittle_client">Identifícate con nosotros</string>
 
-    <string name="introduce_t">Correo electrónico</string>
+        <string name="introduce_t">Correo electrónico</string>
 
-    <string name="reg_email">Example@gmail.com</string>
+        <string name="reg_email">Example@gmail.com</string>
 
-    <string name="reg_password">Contraseña</string>
+        <string name="reg_password">Contraseña</string>
 
-    <string name="reg_passwordconfirm">Confirmar Contraseña</string>
+        <string name="reg_passwordconfirm">Confirmar Contraseña</string>
 
-    <string name="reg_genero">Indica tu genero:</string>
+        <string name="reg_genero">Indica tu genero:</string>
 
-    <string name="reg_title_select">Tipo de cuenta:</string>
-    <string name="reg_bussines_select">NEGOCIO</string>
-    <string name="reg_client_select">CLIENTE</string>
-    <string name="register_continue">Continuar</string>
+        <string name="reg_title_select">Tipo de cuenta:</string>
+        <string name="reg_bussines_select">NEGOCIO</string>
+        <string name="reg_client_select">CLIENTE</string>
+        <string name="register_continue">Continuar</string>
 
-    <!-- Pantalla Registro Negocio -->
-    <string name="reg_bus_tittle_client">Datos de su Negocio</string>
-    <string name="reg_bus_name">Nombre de su establecimiento</string>
-    <string name="reg_bus_type">Tipo de gastronomia</string>
-    <string name="reg_bus_address">Direccion del lugar</string>
-    <string name="reg_bus_create">COMPLETAR REGISTRO</string>
+        <!-- Pantalla Registro Negocio -->
+        <string name="reg_bus_tittle_client">Datos de su Negocio</string>
+        <string name="reg_bus_name">Nombre de su establecimiento</string>
+        <string name="reg_bus_type">Tipo de gastronomia</string>
+        <string name="reg_bus_address">Direccion del lugar</string>
+        <string name="reg_bus_create">COMPLETAR REGISTRO</string>
 
-    <!-- Pantalla Registro Cliente -->
-    <string name="reg_cli_tittle_client">Datos de cliente</string>
-    <string name="reg_cli_name">Nombre de usuario</string>
-    <string name="reg_cli_create">COMPLETAR REGISTRO</string>
+        <!-- Pantalla Registro Cliente -->
+        <string name="reg_cli_tittle_client">Datos de cliente</string>
+        <string name="reg_cli_name">Nombre de usuario</string>
+        <string name="reg_cli_create">COMPLETAR REGISTRO</string>
+
+        <!-- Género (RadioButtons) -->
+        <string name="gender_male">Masculino</string>
+        <string name="gender_female">Femenino</string>
+        <string name="gender_other">Otro</string>
+
 
 </resources>

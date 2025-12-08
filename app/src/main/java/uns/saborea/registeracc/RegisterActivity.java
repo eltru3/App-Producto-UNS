@@ -22,36 +22,32 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_register); // Layout XML de registro
+        setContentView(R.layout.activity_register);
 
-        // Vinculación de Vistas (Ajusta los IDs a tu XML)
+        // Vinculación de Vistas
         editEmail = findViewById(R.id.register_email);
         editPassword = findViewById(R.id.register_password);
-        editRepeatPassword = findViewById(R.id.register_password_repeat);
+        editRepeatPassword = findViewById(R.id.register_passwordconfirm);
+
         // Vinculación del ToggleGroup
         toggleGroupAccountType = findViewById(R.id.toggle_group_register);
         buttonRegister = findViewById(R.id.button_register_continue);
 
-        // Listener para el botón principal
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Inicia el flujo de registro multi-paso
                 startMultiStepRegistration();
             }
         });
     }
 
     private void startMultiStepRegistration() {
-        // Recoleccion y validación
         String email = editEmail.getText().toString().trim();
         String password = editPassword.getText().toString();
         String repeatPassword = editRepeatPassword.getText().toString();
 
-        // Determina el tipo de cuenta seleccionado
         String tipoCuenta = getSelectedAccountType();
 
-        // 1. Validaciones
         if (email.isEmpty() || password.isEmpty() || repeatPassword.isEmpty()) {
             Toast.makeText(this, "Completa todos los campos.", Toast.LENGTH_SHORT).show();
             return;
@@ -65,7 +61,6 @@ public class RegisterActivity extends AppCompatActivity {
             return;
         }
 
-        // 2. Navegación al Siguiente Paso (Basado en la elección)
         Intent intent;
         Class<?> nextActivity;
 
@@ -77,8 +72,6 @@ public class RegisterActivity extends AppCompatActivity {
 
         intent = new Intent(RegisterActivity.this, nextActivity);
 
-        // 3. Pasar los datos básicos a la siguiente Activity
-        // CRUCIAL: Pasamos la info de la tabla 'usuarios' a la siguiente pantalla
         intent.putExtra("EMAIL", email);
         intent.putExtra("PASSWORD", password);
         intent.putExtra("TIPO_CUENTA", tipoCuenta);
@@ -86,7 +79,6 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // Metodo para obtener el valor del MaterialButtonToggleGroup
     private String getSelectedAccountType() {
         int selectedId = toggleGroupAccountType.getCheckedButtonId();
 

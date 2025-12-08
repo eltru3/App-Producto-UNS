@@ -16,11 +16,19 @@
     <string name="login">Iniciar sesión</string>
 
     <!-- Pantalla de Registro Principal -->
-    <string name="reg_tittle_client">¡Crea tu cuenta!</string>
-    <string name="reg_create_email">Correo Electrónico</string>
-    <string name="reg_create_password">Contraseña</string>
-    <string name="reg_create_password_repeat">Repetir contraseña</string>
-    <string name="reg_title_select">Tipo de cuenta</string>
+    <string name="reg_tittle_client">Identifícate con nosotros</string>
+
+    <string name="introduce_t">Correo electrónico</string>
+
+    <string name="reg_email">Example@gmail.com</string>
+
+    <string name="reg_password">Contraseña</string>
+
+    <string name="reg_passwordconfirm">Confirmar Contraseña</string>
+
+    <string name="reg_genero">Indica tu genero:</string>
+
+    <string name="reg_title_select">Tipo de cuenta:</string>
     <string name="reg_bussines_select">NEGOCIO</string>
     <string name="reg_client_select">CLIENTE</string>
     <string name="register_continue">Continuar</string>

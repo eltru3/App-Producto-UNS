@@ -62,6 +62,10 @@ public class LoginActivityMain extends AppCompatActivity {
             return insets;
         });
 
+        // 2. Comprobar si ya hay una sesión guardada antes de mostrar la pantalla de login
+        // Nota: activado para redirigir si ya existe sesión
+        checkExistingSession();
+
         // TEXTO: "¿No tienes una cuenta? Regístrate"
         TextView textRegistro = findViewById(R.id.textRegistro);
         if (textRegistro != null) {
@@ -105,12 +109,9 @@ public class LoginActivityMain extends AppCompatActivity {
         }
 
         // 1. Vincular Vistas (Ajusta los IDs a tu XML de Login)
-        editEmail = findViewById(R.id.emailInput);
+        editEmail = findViewById(R.id.EmailLoginInput);
         editPassword = findViewById(R.id.passwordInput);
         buttonLogin = findViewById(R.id.buttonLogin); // ID del botón "Iniciar sesión"
-
-        // 2. Comprobar si ya hay una sesión guardada antes de mostrar la pantalla de login
-        // checkExistingSession();
 
         // 3. Listener para el Login
         buttonLogin.setOnClickListener(new View.OnClickListener() {

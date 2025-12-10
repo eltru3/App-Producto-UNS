@@ -21,6 +21,7 @@ import android.widget.Toast;
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -66,6 +67,9 @@ public class LoginActivityMain extends AppCompatActivity {
         // Nota: activado para redirigir si ya existe sesión
         checkExistingSession();
 
+        int colorId = R.color.colorTextUniversal;
+        int colorValue = ContextCompat.getColor(this, colorId);
+
         // TEXTO: "¿No tienes una cuenta? Regístrate"
         TextView textRegistro = findViewById(R.id.textRegistro);
         if (textRegistro != null) {
@@ -83,6 +87,7 @@ public class LoginActivityMain extends AppCompatActivity {
 
             // CLICK + apariencia de "Regístrate" (NEGRO)
             ClickableSpan clickableSpan = new ClickableSpan() {
+
                 @Override
                 public void onClick(@NonNull View widget) {
                     Intent intent = new Intent(LoginActivityMain.this, RegisterActivity.class);
@@ -92,7 +97,7 @@ public class LoginActivityMain extends AppCompatActivity {
                 @Override
                 public void updateDrawState(@NonNull TextPaint ds) {
                     super.updateDrawState(ds);
-                    ds.setColor(Color.BLACK);    // COLOR NEGRO
+                    ds.setColor(colorValue);    // COLOR NEGRO
                     ds.setUnderlineText(false);   // sin subrayado
                 }
             };

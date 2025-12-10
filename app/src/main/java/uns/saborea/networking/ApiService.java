@@ -7,7 +7,7 @@ import java.util.Map;
 
 public interface ApiService {
 
-    // Se define la ruta a la URL base
+    // PETICIONES TIPO: POST
     @POST("api/register.php")
     Call<ModelResponse> registerUser(@Body Map<String, String> userData);
 

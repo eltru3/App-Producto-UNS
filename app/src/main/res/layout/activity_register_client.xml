@@ -64,6 +64,53 @@
             android:layout_height="25dp"
             android:background="@color/colorSurfaceBackground" />
 
+        <TextView
+            android:id="@+id/Register_genero"
+            android:layout_width="327dp"
+            android:layout_height="30dp"
+            android:gravity="start"
+            android:labelFor="@id/radioGroupGender"
+            android:lineSpacingExtra="5sp"
+            android:text="@string/reg_genero"
+            android:textAppearance="@style/TextAllReg" />
+
+        <RadioGroup
+            android:id="@+id/radioGroupGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/Male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:buttonTint="@color/colorTextUniversalInverse"
+                android:text="@string/gender_male" />
+
+            <RadioButton
+                android:id="@+id/Female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="24dp"
+                android:buttonTint="@color/colorTextUniversalInverse"
+                android:text="@string/gender_female" />
+
+            <RadioButton
+                android:id="@+id/nosay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:buttonTint="@color/colorTextUniversalInverse"
+                android:text="@string/gender_other" />
+
+        </RadioGroup>
+
+        <View
+            android:id="@+id/divider5"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="@color/colorSurfaceBackground" />
+
         <com.google.android.material.button.MaterialButtonToggleGroup
             android:id="@+id/toggle_group"
             android:layout_width="wrap_content"

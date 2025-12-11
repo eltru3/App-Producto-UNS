@@ -2,25 +2,20 @@
 <resources>
     <!-- Paleta base -->
     <color name="black_w">#202020</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="turquoise">#5DE2E7</color>
-    <color name="turquoise_mblack">#01AEB4</color>
-    <color name="turquoise_mmblack">#00666A</color>
-    <color name="blue">#0078D7</color>
-    <color name="blue_light">#6C9EEB</color>
     <color name="white_model1">#F5F5F5</color>
+
     <!-- Dorados -->
     <color name="gold_soft">#F2CB91</color>
     <color name="gold_lighter">#FFF3D6</color>
-    <color name="gold_strong">#E6B566</color> <!-- dorado más fuerte -->
-
+    <color name="gold_strong">#FFD05B</color> <!-- dorado más fuerte -->
 
     <color name="colorSurfaceBackground">@color/white_model1</color>
     <color name="colorButtonTextStroke">@color/black_w</color>
     <color name="colorButtonRipple">@color/gold_soft</color>
     <color name="colorButtonChecked">@color/gold_strong</color>
 
-
+    <!-- COLORES ALTERNADOS -->
+    <color name="colorAppUniversal">#FFC636</color>
     <color name="colorTextUniversal">#FF000000</color>
     <color name="colorTextUniversalInverse">#FFFFFFFF</color>
 </resources>

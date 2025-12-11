@@ -31,7 +31,7 @@
         <View
             android:id="@+id/divider1"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="70dp"
             android:background="@color/colorSurfaceBackground" />
 
         <TextView
@@ -48,7 +48,7 @@
         <View
             android:id="@+id/divider2"
             android:layout_width="match_parent"
-            android:layout_height="45dp"
+            android:layout_height="50dp"
             android:background="@color/colorSurfaceBackground" />
 
         <!-- EMAIL LABEL -->
@@ -177,54 +177,6 @@
             android:layout_height="20dp"
             android:background="@color/colorSurfaceBackground" />
 
-        <!-- GENERO LABEL -->
-        <TextView
-            android:id="@+id/Register_genero"
-            android:layout_width="327dp"
-            android:layout_height="30dp"
-            android:gravity="start"
-            android:labelFor="@id/radioGroupGender"
-            android:lineSpacingExtra="5sp"
-            android:text="@string/reg_genero"
-            android:textAppearance="@style/TextAllReg" />
-
-        <RadioGroup
-            android:id="@+id/radioGroupGender"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <RadioButton
-                android:id="@+id/Male"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:buttonTint="@color/colorTextUniversalInverse"
-                android:text="@string/gender_male" />
-
-            <RadioButton
-                android:id="@+id/Female"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginEnd="24dp"
-                android:buttonTint="@color/colorTextUniversalInverse"
-                android:text="@string/gender_female" />
-
-            <RadioButton
-                android:id="@+id/nosay"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:buttonTint="@color/colorTextUniversalInverse"
-                android:text="@string/gender_other" />
-
-        </RadioGroup>
-
-        <View
-            android:id="@+id/divider5"
-            android:layout_width="match_parent"
-            android:layout_height="10dp"
-            android:background="@color/colorSurfaceBackground" />
-
         <!-- TIPO CUENTA LABEL -->
         <TextView
             android:id="@+id/Register_tipocuenta"
@@ -267,8 +219,8 @@
             android:layout_height="wrap_content"
             android:text="@string/register_continue"
             android:textAllCaps="false"
-            android:textColor="@color/colorTextUniversalInverse"
-            app:backgroundTint="@color/colorTextUniversal" />
+            android:textColor="@color/black_w"
+            app:backgroundTint="@color/colorAppUniversal" />
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

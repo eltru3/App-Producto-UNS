@@ -31,7 +31,7 @@
         <View
             android:id="@+id/divider1"
             android:layout_width="match_parent"
-            android:layout_height="25dp"
+            android:layout_height="140dp"
             android:background="@color/colorSurfaceBackground" />
 
         <TextView
@@ -69,7 +69,7 @@
             android:autofillHints="username"
             android:textSize="20sp" />
 
-
+        <!-- GENERO LABEL -->
         <View
             android:id="@+id/divider3"
             android:layout_width="match_parent"

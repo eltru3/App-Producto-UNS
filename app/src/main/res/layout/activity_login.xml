@@ -24,7 +24,8 @@
             android:gravity="center"
             android:lineSpacingExtra="7sp"
             android:text="@string/nombre"
-            android:textAppearance="@style/nombre" />
+            android:textAppearance="@style/nombre"
+            android:textColor="@color/colorAppUniversal" />
 
         <!-- divider1 -->
         <View
@@ -119,10 +120,10 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
             android:text="@string/login"
-            android:textColor="@color/colorTextUniversalInverse"
+            android:textColor="@color/black_w"
             android:textAllCaps="false"
             android:fontFamily="@font/inter_medium"
-            app:backgroundTint="@color/colorTextUniversal"/>
+            app:backgroundTint="@color/colorAppUniversal"/>
 
         <!-- Separador con texto "o" -->
         <LinearLayout

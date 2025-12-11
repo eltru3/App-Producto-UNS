@@ -90,6 +90,11 @@ public class RegisterActivityClient extends AppCompatActivity {
             return;
         }
 
+        if (basicGender == null) {
+            Toast.makeText(this, "Por favor, escoja un género", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         // Llama a la función de envío con TODOS los datos
         sendRegistrationRequest(nombreCuenta);
     }

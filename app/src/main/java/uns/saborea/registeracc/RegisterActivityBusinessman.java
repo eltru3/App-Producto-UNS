@@ -63,6 +63,17 @@ public class RegisterActivityBusinessman extends AppCompatActivity {
                 attemptFinalRegistration();
             }
         });
+
+        // BOTON PARA ATRAS
+        ImageButton buttonBack = findViewById(R.id.button_back); // Asegúrate de usar el ID correcto
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Este es el comando clave: Cierra la Activity actual
+                // y regresa automáticamente a la Activity que la llamó.
+                finish();
+            }
+        });
     }
 
     private void attemptFinalRegistration() {

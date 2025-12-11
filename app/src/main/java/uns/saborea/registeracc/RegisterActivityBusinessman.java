@@ -65,7 +65,7 @@ public class RegisterActivityBusinessman extends AppCompatActivity {
         });
 
         // BOTON PARA ATRAS
-        ImageButton buttonBack = findViewById(R.id.button_back); // Asegúrate de usar el ID correcto
+        ImageButton buttonBack = findViewById(R.id.button_back);
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

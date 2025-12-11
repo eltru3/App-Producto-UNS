@@ -17,7 +17,7 @@
             android:name=".business_activities.BusinessDashboardActivity"
             android:exported="false" />
         <activity
-            android:name=".clienta_ctivities.ClientHomeActivity"
+            android:name=".client_activities.ClientHomeActivity"
             android:exported="false" />
         <activity
             android:name=".registeracc.RegisterActivityBusinessman"

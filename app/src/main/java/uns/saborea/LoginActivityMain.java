@@ -34,7 +34,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 import uns.saborea.business_activities.BusinessDashboardActivity;
-import uns.saborea.clienta_ctivities.ClientHomeActivity;
+import uns.saborea.client_activities.ClientHomeActivity;
 import uns.saborea.networking.ApiService;
 import uns.saborea.networking.ModelResponse;
 import uns.saborea.networking.RetrofitClient;
@@ -63,8 +63,7 @@ public class LoginActivityMain extends AppCompatActivity {
             return insets;
         });
 
-        // 2. Comprobar si ya hay una sesión guardada antes de mostrar la pantalla de login
-        // Nota: activado para redirigir si ya existe sesión
+        // Comprueba si hay sesion existente
         checkExistingSession();
 
         int colorId = R.color.colorTextUniversal;
@@ -113,12 +112,11 @@ public class LoginActivityMain extends AppCompatActivity {
             textRegistro.setHighlightColor(Color.TRANSPARENT);
         }
 
-        // 1. Vincular Vistas (Ajusta los IDs a tu XML de Login)
         editEmail = findViewById(R.id.EmailLoginInput);
         editPassword = findViewById(R.id.passwordInput);
-        buttonLogin = findViewById(R.id.buttonLogin); // ID del botón "Iniciar sesión"
+        buttonLogin = findViewById(R.id.buttonLogin);
 
-        // 3. Listener para el Login
+        // Listener para el Logueo
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -127,7 +125,7 @@ public class LoginActivityMain extends AppCompatActivity {
         });
     }
 
-    // Metodo que gestiona la recolección de datos y la llamada a la API
+    // Metodo que llama a la API para loguearse
     private void attemptLogin() {
         String email = editEmail.getText().toString().trim();
         String password = editPassword.getText().toString();
@@ -139,6 +137,7 @@ public class LoginActivityMain extends AppCompatActivity {
         sendLoginRequest(email, password);
     }
 
+    // Metodo para traer credenciales
     private void sendLoginRequest(String email, String password) {
 
         // Crear el mapa de credenciales para enviar al login.php
@@ -158,16 +157,16 @@ public class LoginActivityMain extends AppCompatActivity {
                     // CÓDIGO 200 (OK) - Login Exitoso
                     ModelResponse body = response.body();
 
-                    // 1. Guardar la ID y el rol del usuario para mantener la sesión
+                    // Guardar la ID y el rol del usuario para mantener la sesión
                     saveUserSession(body.getUserId(), body.getAccountType());
 
                     Toast.makeText(LoginActivityMain.this, "✅ " + body.getMessage(), Toast.LENGTH_LONG).show();
 
-                    // 2. Navegar a la pantalla principal (Home)
+                    // Navegar a la pantalla principal (Home)
                     navigateToHome(body.getAccountType());
 
                 } else if (response.code() == 401) {
-                    // CÓDIGO 401 (Unauthorized) - Email o contraseña incorrectos
+                    // CÓDIGO 401 (No autorizado) - Email o contraseña incorrectos
                     Toast.makeText(LoginActivityMain.this, "Credenciales inválidas. Intenta de nuevo.", Toast.LENGTH_LONG).show();
 
                 } else {
@@ -176,7 +175,7 @@ public class LoginActivityMain extends AppCompatActivity {
                 }
             }
 
-            @Override // <-- Metodo 'onFailure' ahora completo para resolver el error
+            @Override // Metodo (onFailure) para resolver el error
             public void onFailure(Call<ModelResponse> call, Throwable t) {
                 // Fallo de red (Revisar SSL/Conexión/VPS)
                 Toast.makeText(LoginActivityMain.this, "Fallo de Red: " + t.getMessage(), Toast.LENGTH_LONG).show();
@@ -184,12 +183,11 @@ public class LoginActivityMain extends AppCompatActivity {
         });
     }
 
+    /**========================================================================
+     METODOS DE GESTION DE SESION
+     ========================================================================*/
 
-    // ========================================================================
-    // MÉTODOS DE GESTIÓN DE SESIÓN
-    // ========================================================================
-
-    /** Guarda la ID del usuario y el tipo de cuenta en SharedPreferences. */
+    /* Guarda la ID del usuario y el tipo de cuenta en SharedPreferences. */
     private void saveUserSession(int userId, String accountType) {
         SharedPreferences sharedPref = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
@@ -201,8 +199,8 @@ public class LoginActivityMain extends AppCompatActivity {
         Toast.makeText(this, "Sesión guardada para ID: " + userId, Toast.LENGTH_SHORT).show();
     }
 
-    /** Navega a la pantalla principal segun el tipo de cuenta.
-     * Esta funcion reemplaza t0do de navegación.*/
+    /* Navega a la pantalla principal segun el tipo de cuenta.
+       Esta funcion reemplaza t0do de navegación.*/
     private void navigateToHome(String accountType) {
         Class<?> destinationActivity;
 
@@ -221,7 +219,7 @@ public class LoginActivityMain extends AppCompatActivity {
         finish(); // Cierra la Activity de Login para que el usuario no pueda volver con el boton "Atrás"
     }
 
-    // Muestra como verificar la sesion al iniciar la App (no usado todavia)
+    // Metodo para verificar la sesion al iniciar la App
     private void checkExistingSession() {
         SharedPreferences sharedPref = getSharedPreferences(PREFS_NAME, MODE_PRIVATE);
         String accountType = sharedPref.getString(KEY_ACCOUNT_TYPE, null);
@@ -232,7 +230,7 @@ public class LoginActivityMain extends AppCompatActivity {
         }
     }
 
-    /** Metodo ESTÁTICO para cerrar sesión desde cualquier Activity. */
+    /* Metodo estatico para cerrar sesión desde cualquier Activity. */
     public static void logoutUser(Context context) {
         // Accede a SharedPreferences y limpia los datos
         SharedPreferences sharedPref = context.getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);

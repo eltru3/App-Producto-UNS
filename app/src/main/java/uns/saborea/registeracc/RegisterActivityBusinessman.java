@@ -1,11 +1,17 @@
 package uns.saborea.registeracc;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import uns.saborea.R;
@@ -23,11 +29,8 @@ import retrofit2.Response;
 
 public class RegisterActivityBusinessman extends AppCompatActivity {
 
-    // Componentes de la Interfaz
-    private EditText editNombreNegocio, editTipoNegocio, editDireccion;
+    private EditText editNombreNegocio, editDireccion;
     private Button buttonFinalRegister;
-
-    // Variables para almacenar datos básicos del paso 1
     private String basicEmail, basicPassword, basicAccountType;
 
     @Override
@@ -51,20 +54,19 @@ public class RegisterActivityBusinessman extends AppCompatActivity {
             basicAccountType = intent.getStringExtra("TIPO_CUENTA");
         }
 
-        // Validación crítica: si faltan datos, navega de vuelta
+        // VALIDACION: Solo por si faltan datos previamente no llenados
         if (basicEmail == null || basicPassword == null || !basicAccountType.equals("negocio")) {
-            Toast.makeText(this, "Error de flujo: Faltan datos iniciales.", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Error: Faltan datos iniciales.", Toast.LENGTH_LONG).show();
             finish();
             return;
         }
 
-        // 2. Vinculación de Vistas del Negocio (Ajusta los IDs)
+        // [2] Vinculación de Vistas del Negocio (Ajusta los IDs)
         editNombreNegocio = findViewById(R.id.bus_name);
-        editTipoNegocio = findViewById(R.id.bus_type);
         editDireccion = findViewById(R.id.bus_address);
         buttonFinalRegister = findViewById(R.id.buttonRegisterBusinessman);
 
-        // 3. Listener Final: Enviar a la API
+        // [3] Listener Final: Se envia a la API
         buttonFinalRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -77,62 +79,59 @@ public class RegisterActivityBusinessman extends AppCompatActivity {
         buttonBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Este es el comando clave: Cierra la Activity actual
-                // y regresa automáticamente a la Activity que la llamó.
                 finish();
             }
         });
     }
 
+    // Metodo para verificar llenado y mandarlos a la API
     private void attemptFinalRegistration() {
-        // Recolección y limpieza de datos especificos
+
         String nombreNegocio = editNombreNegocio.getText().toString().trim();
-        String tipoNegocio = editTipoNegocio.getText().toString().trim();
         String direccion = editDireccion.getText().toString().trim();
 
-        // Validacion de campos del negocio
+        // Validacion de campos
         if (nombreNegocio.isEmpty() || direccion.isEmpty()) {
             Toast.makeText(this, "Completa el nombre y la dirección del negocio.", Toast.LENGTH_SHORT).show();
             return;
         }
 
         // Llama a la funcion de envio con TODOS los datos
-        sendRegistrationRequest(nombreNegocio, tipoNegocio, direccion);
+        sendRegistrationRequest(nombreNegocio, direccion);
     }
 
-    private void sendRegistrationRequest(String nombreNegocio, String tipoNegocio, String direccion) {
+    // Metodo de comunicacion con la API
+    private void sendRegistrationRequest(String nombreNegocio, String direccion) {
 
-        // 1. Crear el mapa de datos final (Contiene la información de ambas Activities)
+        // Mapeo de toda la informacion recolectada para ser enviadas
         Map<String, String> userData = new HashMap<>();
 
-        // Datos del paso 1 (Tabla 'usuarios')
+        // // Datos (Tabla 'usuarios')
         userData.put("email", basicEmail);
         userData.put("password", basicPassword);
         userData.put("tipo_cuenta", basicAccountType);
 
-        // Datos especificos del negocio
+        // Datos (Tabla 'negocio')
         userData.put("nombre_negocio", nombreNegocio);
-        userData.put("tipo_negocio", tipoNegocio);
         userData.put("direccion", direccion);
         // maps_place_id se puede dejar vacío o manejarlo en un paso futuro
 
-        // 2. Llamar al servicio de Retrofit
+        // Llama al servicio de Retrofit
         ApiService apiService = RetrofitClient.getApiservice();
         Call<ModelResponse> call = apiService.registerUser(userData);
 
-        // 3. Ejecutar la petición
+        // Ejecutar la petición
         call.enqueue(new Callback<ModelResponse>() {
             @Override
             public void onResponse(Call<ModelResponse> call, Response<ModelResponse> response) {
 
                 if (response.isSuccessful() && response.body() != null) {
-                    Toast.makeText(RegisterActivityBusinessman.this, "✅ " + response.body().getMessage(), Toast.LENGTH_LONG).show();
-
-                    // Registro exitoso: Navega al Login
+                    // Registro exitoso: Manda a loguearse
+                    Toast.makeText(RegisterActivityBusinessman.this, response.body().getMessage(), Toast.LENGTH_LONG).show();
                     startActivity(new Intent(RegisterActivityBusinessman.this, LoginActivityMain.class));
                     finish(); // Cierra esta Activity
                 } else if (response.code() == 409) {
-                    // CÓDIGO 409 (Conflict) - Email o nombre ya registrado
+                    // CÓDIGO 409 (Conflict)
                     Toast.makeText(RegisterActivityBusinessman.this, "El email o nombre de negocio ya existe", Toast.LENGTH_LONG).show();
                 } else {
                     // Otros errores del servidor (400, 500)

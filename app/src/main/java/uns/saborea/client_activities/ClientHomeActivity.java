@@ -1,4 +1,4 @@
-package uns.saborea.clienta_ctivities;
+package uns.saborea.client_activities;
 
 import android.os.Bundle;
 import android.view.View;
@@ -27,11 +27,11 @@ public class ClientHomeActivity extends AppCompatActivity {
             return insets;
         });
 
+        // BOTON PARA CERRAR SESION
         Button buttonLogout = findViewById(R.id.button_logout);
         buttonLogout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Llama al metodo estático de la Activity de Login
                 LoginActivityMain.logoutUser(ClientHomeActivity.this);
                 Toast.makeText(ClientHomeActivity.this, "Sesión cerrada.", Toast.LENGTH_SHORT).show();
             }

@@ -1,11 +1,17 @@
 package uns.saborea.registeracc;
 
+import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 import android.os.Bundle;
 import android.content.Intent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.material.button.MaterialButtonToggleGroup;
@@ -16,7 +22,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     private EditText editEmail, editPassword, editRepeatPassword;
     private MaterialButtonToggleGroup toggleGroupAccountType;
-    private Button buttonRegister;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,11 +39,10 @@ public class RegisterActivity extends AppCompatActivity {
         editEmail = findViewById(R.id.register_email);
         editPassword = findViewById(R.id.register_password);
         editRepeatPassword = findViewById(R.id.register_passwordconfirm);
-
-        // Vinculación del ToggleGroup
         toggleGroupAccountType = findViewById(R.id.toggle_group_register);
-        buttonRegister = findViewById(R.id.button_register_continue);
 
+        // BOTON CONTINUAR
+        Button buttonRegister = findViewById(R.id.button_register_continue);
         buttonRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +60,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    /* Metodo preventivo de llenado de campos */
     private void startMultiStepRegistration() {
         String email = editEmail.getText().toString().trim();
         String password = editPassword.getText().toString();
@@ -94,6 +99,7 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    /* Metodo para asignar texto del tipo de cuenta */
     private String getSelectedAccountType() {
         int selectedId = toggleGroupAccountType.getCheckedButtonId();
 

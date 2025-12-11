@@ -16,7 +16,6 @@ public class ModelResponse {
     @SerializedName("tipo_cuenta")
     private String accountType;
 
-    // Métodos Getters
     public String getStatus() {
         return status;
     }

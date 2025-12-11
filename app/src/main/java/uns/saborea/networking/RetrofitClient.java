@@ -5,11 +5,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
 
-    // Usar la IP de la VPS con un dominio con HTTPS
-    // (IMPORTANTE) SSL VÁLIDADO
+    // CONVERTIDOR A JSON
     private static final String BASE_URL = "https://root.saboreapp.online/";
     private static Retrofit retrofit;
 
+    // Instancia de ApiService
     public static ApiService getApiservice() {
         if (retrofit == null) {
             retrofit = new Retrofit.Builder()

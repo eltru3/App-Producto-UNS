@@ -62,6 +62,15 @@ public class RegisterActivityClient extends AppCompatActivity {
                 attemptFinalRegistration();
             }
         });
+
+        // BOTON PARA ATRAS
+        ImageButton buttonBack = findViewById(R.id.button_back);
+        buttonBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 
     private void attemptFinalRegistration() {

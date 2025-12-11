@@ -122,4 +122,21 @@ public class RegisterActivityClient extends AppCompatActivity {
             }
         });
     }
+
+    private String getSelectedGender() {
+        int selectedId = editGenero.getCheckedRadioButtonId();
+
+        if (selectedId == View.NO_ID) {
+            return null;
+        }
+
+        if (selectedId == R.id.Male) {
+            return "M";
+        } else if (selectedId == R.id.Female) {
+            return "F";
+        } else if (selectedId == R.id.nosay) {
+            return "O";
+        }
+        return null;
+    }
 }

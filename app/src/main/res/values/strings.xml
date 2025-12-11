@@ -26,7 +26,7 @@
 
         <string name="reg_passwordconfirm">Confirmar Contraseña</string>
 
-        <string name="reg_genero">Indica tu genero:</string>
+        <string name="reg_genero">Indique su género:</string>
 
         <string name="reg_title_select">Tipo de cuenta:</string>
         <string name="reg_bussines_select">NEGOCIO</string>
